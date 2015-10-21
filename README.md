@@ -1,15 +1,17 @@
-Guia para utilização do Togglz, com o MongoDB e Spring Security
+#Togglz, com o MongoDB e Spring Security
  
 Para utilização do Togglz, deve-se importar a seguinte dependência no pom.xml do projeto:
 
+```
 <dependency>
 	<groupId>com.utils</groupId>
 	<artifactId>sharedtogglzconfig</artifactId>
 	<version>1.0</version>
 </dependency>
- 
+```
 Cria um enum para as Features no Togglz:
 
+```
 import org.togglz.core.Feature;
 import org.togglz.core.annotation.Label;
 import org.togglz.core.context.FeatureContext;
@@ -25,10 +27,11 @@ public enum ProjectNameTogglzFeatures implements Feature {
   }
  
 }
+```
  
 Cria a seguinte classe que cria um bean para os Features e role do Spring Security (Não esquecer de implementar a Segurança):
 
-
+```
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.togglz.core.Feature;
@@ -49,6 +52,7 @@ public class ProjectNameTogglzConfig {
         return new SpringSecurityUserProvider(ADMIN_AUTHORITY);
     }
 }
+```
  
  
 Adicionar a seguinte linha no default.properties do projeto, para definir o tempo de cache para as informações lidas do banco e o acesso ao banco:
