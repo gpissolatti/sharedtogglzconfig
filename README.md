@@ -54,7 +54,7 @@ public class ProjectNameTogglzConfig {
 }
 ```
 
-Adicionar a seguinte linha no default.properties do projeto, para definir o tempo de cache para as informações lidas do banco e o acesso ao banco:
+Adicionar as propriedades abaixo no arquivo properties do projeto, para definir o tempo de cache para as informações lidas do banco e o acesso ao banco:
 
 ```
 spring.data.togglz.cacheTimeout:5
