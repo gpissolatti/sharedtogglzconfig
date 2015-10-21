@@ -1,8 +1,6 @@
-Guia para utilização do Togglz, com o MongoDB no Spartacus.
+Guia para utilização do Togglz, com o MongoDB e Spring Security
  
 Para utilização do Togglz, deve-se importar a seguinte dependência no pom.xml do projeto:
- 
-pom.xml
 
 <dependency>
 	<groupId>com.utils</groupId>
@@ -11,8 +9,6 @@ pom.xml
 </dependency>
  
 Cria um enum para as Features no Togglz:
- 
-ProjectNameTogglzFeatures.enum
 
 import org.togglz.core.Feature;
 import org.togglz.core.annotation.Label;
