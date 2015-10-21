@@ -53,12 +53,14 @@ public class ProjectNameTogglzConfig {
     }
 }
 ```
- 
- 
+
 Adicionar a seguinte linha no default.properties do projeto, para definir o tempo de cache para as informações lidas do banco e o acesso ao banco:
+
+```
 spring.data.togglz.cacheTimeout:5
 spring.data.mongodb.database: projectname
 spring.data.mongodb.host: endereçodeorigem
+```
 
 Na classe de configuração do projeto deve ser importada, a seguinte classe: SharedTogglzConfig.class. Se tudo estiver ok, será possível acessar o console admin do togglz através de /tooglz/index.
  
